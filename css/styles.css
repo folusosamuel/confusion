@@ -57,3 +57,19 @@ border-right: 1px solid #ddd;
     left: 0;
     min-height: 300px;
 }
+
+.card{
+    color: black;
+}
+
+.modal-title{
+    color: black;
+    font-weight: 400;
+}
+
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
