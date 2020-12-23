@@ -29,10 +29,11 @@
           <li class="nav-item"><a href="" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a></li>
           <li class="nav-item"><a href="" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
         </ul>
-        <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
-        </span>Login
+        <span class="navbar-text navbar-dark">
+          <a id="myLogin">
+        Login
         </a>
+      </span>
       </div>
     </div>
   </nav>
@@ -93,7 +94,8 @@
 
 
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-block  text-dark btn-warning" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-block  text-dark btn-warning" id="myBtn" >
+         <!-- <button type="button" class="btn btn-block  text-dark btn-warning" data-toggle="modal" data-target="#exampleModal"></button> -->
             Reserve Table
           </button>
         </div>
@@ -111,7 +113,7 @@
           </div>
           <div class="modal-body">
             <div class="row row-content align-items-center">
-              <div class="card ">
+              <div class="card "></div>
                 <!-- <h5 class="card-header text-black ">Reserve a Table</h5>
            -->
                 <div class="card-body">
@@ -371,6 +373,14 @@
   </script>
   <script>
       $(document).ready(function(){
+        $("#myLogin").click(function(){
+          $("#loginModal").modal();
+        })
+
+        $("#myBtn").click(function(){
+          $("#exampleModal").modal();
+        })
+        
           $('#mycarousel').carousel({interval:2000});
           $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
